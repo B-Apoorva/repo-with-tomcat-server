@@ -29,14 +29,13 @@ pipeline {
             }
         }
     }
-     stages {
-        stage('Build') {
+        stage('Build code') {
             steps {
                 sshagent(['deploy_user']) {
     // some block
 }
             }
         }
-     }
+     
     
 }
