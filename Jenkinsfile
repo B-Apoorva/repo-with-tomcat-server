@@ -17,6 +17,9 @@ pipeline {
 
                 // To run Maven on a Windows agent, use
                 // bat "mvn -Dmaven.test.failure.ignore=true clean package"
+                 sshagent(['deploy_user']) {
+    // some block
+}
             }
 
             post {
@@ -28,14 +31,5 @@ pipeline {
                 }
             }
         }
-    }
-        stage('Build') {
-            steps {
-                sshagent(['deploy_user']) {
-    // some block
-}
-            }
-        }
-     
-    
+    }  
 }
