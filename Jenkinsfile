@@ -17,7 +17,7 @@ pipeline{
         }
         stage('deploy to tomcat server'){
             steps{
-                deploy adapters: [tomcat8(credentialsId: 'e92fd400-79fe-421f-89fc-8077dc7d6c87', path: '', url: 'http://ec2-43-206-158-186.ap-northeast-1.compute.amazonaws.com:8089/')], contextPath: null, war: '**/*.war'
+               deploy adapters: [tomcat8(credentialsId: 'b88ab99e-d96e-45a4-a6ee-4c1a36d8f949', path: '', url: 'http://ec2-43-206-158-186.ap-northeast-1.compute.amazonaws.com:8089/')], contextPath: null, war: '**/*.war'
             }
         }
     }
