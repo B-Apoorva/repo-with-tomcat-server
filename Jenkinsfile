@@ -64,7 +64,7 @@ pipeline{
                     }
                 }
             }
-    
+       }
        
         stage('deploy to tomcat server'){
             steps{
