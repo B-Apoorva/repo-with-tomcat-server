@@ -32,10 +32,7 @@ pipeline{
                  } */
     stage("Publish to Nexus Repository Manager") {
             steps {
-           nexusArtifactUploader credentialsId: 'nexus-server', groupId: 'Jenkins-user', nexusUrl: 'http://65.0.21.254:8081/repository/repo-with-tomcat-server-SNAP/', nexusVersion: 'nexus3', protocol: 'http', repository: 'repo-with-tomcat-server-SNAP', version: '3.43.0-01' 
-                else {
-                        error "*** File: ${artifactPath}, could not be found";
-                    }
+           nexusArtifactUploader credentialsId: 'nexus-server', groupId: 'Jenkins-user', nexusUrl: 'http://65.0.21.254:8081/repository/repo-with-tomcat-server-SNAP/', nexusVersion: 'nexus3', protocol: 'http', repository: 'repo-with-tomcat-server-SNAP', version: '3.43.0-01'  
                 }
             }
         stage('deploy to tomcat server'){
